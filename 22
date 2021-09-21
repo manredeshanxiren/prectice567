@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+
+{
+	int n, a, x,i=0, s=0;
+	scanf_s("%d", &n);
+	x = n;
+	while (n > 0) {
+		a = n % 10;
+		s += a * pow(8, i);
+		n /= 10;
+		i++;
+	}
+	printf_s("%d(8)=%d(10)", x,s);
+	return 0;
+}
+
+
+
+//若要求十六进制或二进制只需把代码中的8换成16或2
+//更精简的
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	scanf_s("%o", &n);
+	printf_s("%d", n);
+	return 0;
+}
+
