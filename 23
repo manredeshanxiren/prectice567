@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int a, b, c, d,s;
+	printf_s("Enter a doller amount:");
+	scanf_s("%d", &s);
+	a = s / 20;
+	s -= 20 * a;
+	b = s / 10;
+	s -= 10 * b;
+	c = s / 5;
+	s -= 5 * c;
+	d = s;
+	printf_s("$20 bills: %d \n$10 bills: %d \n $5 bills: %d \n $1 bills: %d \n", a, b, c, d);
+	return 0;
+}
