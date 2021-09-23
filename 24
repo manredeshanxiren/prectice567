@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int a = 38,n;
+	scanf_s("%d", &n);
+	if (a > n)
+		printf_s("Too small!");
+	else if (a < n)
+		printf_s("Too big!");
+	else
+		printf_s("Good Guess!");
+	return 0;
+}
