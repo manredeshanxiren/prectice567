@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int a, b;
+	int i,c=0;
+	scanf_s("%d%d", &a, &b);
+	for (i = a; i <= b; i++)
+	{
+		int j = 0;
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+				break;
+		}
+		        if (i == j)
+			    {
+				  c++;
+				  printf_s("%d ", i);
+
+			    }
+
+	}
+	printf_s("素数的总数是：%d", c);
+	return 0;
+}
+//试除法
