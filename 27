@@ -1,0 +1,33 @@
+#include<stdio.h>
+#define N 9
+int main()
+{
+	int i, j, t;
+	int a[N] = { 1,2,3,4,5,6,7,8,9 };//打括号里输入自己想排序的的数组
+	printf_s("原始数据：\n");
+	for (i = 0; i < N; i++)
+	{
+		printf_s("%d", a[i]);
+	}
+	printf_s("\n");
+	for (i = 0; i < N - 1; i++)//N-1 因为冒泡排序法n个数据需要n-1次排序法
+	{
+		for (j = 0; j < N - 1; j++)//N-1 是因为每次排序调整的次数都比上一次少一次
+		{
+			if (a[j] < a[j + 1])//调换数字从大到小用 > 从小到大 <  
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+
+		}
+    }
+	printf_s("排序后的数据：\n");
+	for (i = 0; i < N; i++)
+	{
+		printf_s("%d", a[i]);
+	}
+
+	return 0;
+}
