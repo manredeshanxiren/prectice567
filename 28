@@ -11,3 +11,21 @@ int main()
 	printf_s("%d", b);
 	return 0;
 }
+
+
+
+#include <stdio.h>
+int main()
+{
+	int a, c = 100,b=0;
+	int i;
+	scanf_s("%d", &a);
+	for (i = 0; i < 3; i++)
+	{
+		b += a % 10 * c;
+		a /= 10;
+		c /= 10;
+	}
+	printf_s("%d", b);
+	return 0;
+}
