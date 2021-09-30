@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int day, a;
+	printf_s("请输入天数：");
+	scanf_s("%d", &day);
+	a = day % 5;
+	switch (a) {
+	case 1:
+	case 2:
+	case 3:
+		printf_s("正在打鱼");
+		break;
+	case 4:
+	case 0:
+		printf_s("正在晒网");
+		break;
+	default:
+		printf_s("不是正确的天数！");
+	}
+	return 0;
+}
