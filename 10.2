@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	int w, m, s, d = 0, n;
+	scanf_s("%d", &n);
+	for (m = 0; m <= n / 3; m++)
+	{
+		for (w = 0; w <= n/2; w++)
+		{
+			s = n - m - w;
+
+			if (m * 3 + w * 2 + s * 0.5 == n)
+			{
+				d++;
+				printf("men = %d, women = %d, child = %d\n", m, w, s);
+			}
+
+		}
+	}
+	if (d == 0)
+		printf_s("None");
+	return 0;
+}
+
