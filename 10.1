@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int a, b;
+	scanf_s("%d", &a);
+	for (int i = 0; i < 7; i++)
+	{
+		scanf_s("%d", &b);
+		if (b == a)
+		{
+			printf_s("Lucky You!\n");
+			return 0;
+		}
+		else if (b < a)
+			printf_s("Too small\n");
+		else
+			printf_s("Too big\n");
+	}
+	printf_s("Game Over!\n");
+	return 0;
+}
