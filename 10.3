@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int cm, inch, foot;
+	scanf_s("%d", &cm);
+	foot = cm / 30.48;
+	inch = (cm / 30.48 - foot) * 12;
+	printf_s("%d %d", foot, inch);
+	return 0;
+}
