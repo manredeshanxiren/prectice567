@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a, b = 0, x;
+	scanf("%d", &a);
+	int j = 2;
+	for (int i = 0; i < 3; i++)
+	{
+		
+		x = a / pow(10, j);
+		a -= x * pow(10, j);
+		b += x * pow(10, i);
+		j--;
+	}
+	printf("%d", b);
+	return 0;
+}
