@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	char a;
+	scanf_s("%c", &a);
+	switch (a >= 'a' && a <= 'w')
+	{
+	    case 1:
+	    {
+		printf_s("%c", a + 3);
+		break;
+	    }
+	    case 0:
+	    {
+		printf_s("%c", a - 23);
+		break;
+	    }
+	}
+	return 0;
+}
