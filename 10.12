@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    if(a > 60)
+        printf("Speed: %d - Speeding", a);
+    else if(a >= 0 && a <= 60)
+        printf("Speed: %d - OK", a);
+    return 0;
+}
