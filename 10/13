@@ -1,0 +1,18 @@
+本题目要求计算银行存款的本息，计算公式为sum=money×(1+rate)year
+ ，其中sum为存款到期时的本息合计（税前），money是存款金额，year是存期，rate是年利率
+
+
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int mon,year;
+    float sum,rate,x,y;
+    scanf("%d %d %f",&mon,&year,&rate);
+    x=1+rate;
+	y=pow(x,year);
+    sum=mon*y;
+    printf("sum = %.2f",sum);
+    
+ }
