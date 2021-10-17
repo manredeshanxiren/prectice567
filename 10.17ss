@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define MAXN 10
+typedef float ElementType;
+
+ElementType Max( ElementType S[], int N )
+{
+    for(int i = 0; i < N-1; i++)
+    {
+        for(int j = 0; j < N -i - 1; j++)
+        {
+         if(S[j] < S[j+1])
+         {
+             int t = S[j];
+             S[j] = S[j + 1];
+             S[j + 1] = t;
+         }
+        }
+    }
+    return S[0];
+}
+
+int main ()
+{
+    ElementType S[MAXN];
+    int N, i;
+
+    scanf("%d", &N);
+    for ( i=0; i<N; i++ )
+        scanf("%f", &S[i]);
+    printf("%.2f\n", Max(S, N));
+
+    return 0;
+}
+
+/* 你的代码将被嵌在这里 */
