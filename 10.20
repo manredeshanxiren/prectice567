@@ -1,0 +1,17 @@
+ElementType Median(ElementType A[], int N)
+{
+    ElementType temp;
+    for (int gap = N / 2; gap > 0; gap = gap / 2)
+    {
+        for (int i = gap; i < N; i++)
+        {
+            for (int j = i - gap; j >= 0 && A[j] > A[j + gap]; j = j - gap)
+            {
+                temp = A[j];
+                A[j] = A[j + gap];
+                A[j + gap] = temp;
+            }
+        }
+    }
+    return A[N / 2];
+}
