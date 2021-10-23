@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[5][81];
+	char b[1][81];
+	for(int i=0;i<5;i++)
+	{
+		scanf("%s",a[i]);
+	}
+	for(int i=0;i<4;i++)
+	{
+       for(int j=i+1;j<5;j++)
+       {
+       	 if(strcmp(a[i],a[j])>0)
+       	    {
+       	    	strcpy(b[0],a[i]);
+       	    	strcpy(a[i],a[j]);
+       	    	strcpy(a[j],b[0]);
+			}
+	   }
+	}
+	printf("After sorted:\n");
+	for(int i=0;i<5;i++)
+	{
+		printf("%s\n",a[i]);
+	}
+	return 0;
+}
