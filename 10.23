@@ -1,0 +1,25 @@
+#include<stdio.h>
+#define N 6
+int main()
+{
+    int arr[N][N] = {0};
+    int m, n;
+    scanf("%d%d", &m, &n);
+    for (int j = 0; j < n; j++)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[j][(i + m) % n]);
+        }
+    }
+    for (int j = 0; j < n; j++)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            printf("%d ", arr[j][i]);
+            if(i == n - 1)
+                printf("\n");
+        }
+    }
+    return 0;
+}
