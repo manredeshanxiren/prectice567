@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+int test_num(int i, int n)
+{
+	int x = i, a,sum = 0;
+	do 
+	{
+		a = x % 10;
+		x /= 10;
+		sum += pow(a , n);
+	} 
+	while (x);
+	if (sum == i)
+	{
+		printf_s("%d\n", i);
+	}	
+}
+int main()
+{
+	int N;
+	scanf_s("%d", &N);
+	int s = N - 1;
+	double n = pow(10, s);
+	double x = pow(10, N);
+	for (int i = n; i < x; i++)
+	{
+	test_num(i,N);
+	}
+	return 0;
+}
