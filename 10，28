@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int m, n, i;	
+	scanf_s("%d%d", &m, &n);
+	for (i = m; i <= n; i++)
+	{
+		int sum = 1;
+		for (int j = 2; j < i; j++)
+		{
+			if (i % j == 0 && i > 3)
+			{
+				sum += j;
+			}
+		}
+			if (sum == i)
+			{
+				printf_s("%d = 1 ", sum);
+				for (int j = 2; j < i; j++)
+				{
+					if (i % j == 0)
+					{
+						printf_s("+ %d ", j);
+					}
+				}
+				printf_s("\n");
+			}
+		
+	}
+	return 0;
+}
