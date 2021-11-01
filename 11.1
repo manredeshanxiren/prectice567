@@ -1,0 +1,31 @@
+#include "test.h"
+int main()
+{
+	int arr[99][99] = { 0 };
+	int ar[99][99] = { 0 };
+	int n;
+	scanf_s("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			scanf_s("%d", &arr[i][j]);
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			ar[j][i] = arr[i][j];
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			printf("%d\t", ar[i][j]);
+		}
+		printf("\n\n");
+	}
+	return 0;
+}
