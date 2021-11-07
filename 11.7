@@ -1,0 +1,31 @@
+//沙漏
+#include<stdio.h>
+int main()
+{
+	int n;
+	char a;
+	scanf_s("%d ", &n);
+	a = getchar();
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < i; j++)
+			printf(" ");
+		for (int j = i; j < n; j++)
+		{
+			printf_s("%c ",a);
+	    }
+		if(i < n)
+		printf_s("\n");
+	}
+	for (int i = n - 2; i >= 0; i--)
+	{
+		for (int j = 0; j < i; j++)
+			printf(" ");
+		for (int j = i; j < n; j++)
+		{
+			printf_s("%c ", a);
+		}
+		printf_s("\n");
+	}
+	return 0;
+}
